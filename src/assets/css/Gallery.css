@@ -1,0 +1,132 @@
+.gallery-banner {
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  background-color: #88b04b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: 1300px;
+}
+
+.banner-title {
+  font-size: 4rem;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.btn {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 14px 40px;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  border: 2px solid transparent;
+}
+
+.btn.active {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.btn.outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn.active:hover,
+.btn.outline:hover {
+  background-color: white;
+  color: #88b04b;
+  border-color: #88b04b;
+}
+
+@media (max-width: 600px) {
+  .banner-title { font-size: 2.5rem; margin-bottom: 20px; }
+  .btn { font-size: 1rem; padding: 12px 28px; }
+  .gallery-banner {
+    margin-top: 3480px;
+  }
+}
+
+.gallery-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #88b04b;
+}
+
+/* Masonry Layout Images */
+.masonry-img-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.masonry-img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+.masonry-img-wrapper:hover .masonry-img {
+  transform: scale(1.03);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.18);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 8px;
+}
+
+.masonry-img-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Video Grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  justify-items: center;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 280px;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .video-grid { grid-template-columns: 1fr; }
+}

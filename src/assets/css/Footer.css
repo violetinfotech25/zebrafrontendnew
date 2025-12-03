@@ -1,0 +1,66 @@
+/* Footer styling */
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-top: auto; /* push footer to bottom if container is flex */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.social-icon {
+  font-size: 28px;
+  color: white;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.social-icon.facebook:hover {
+  color: #1877F2;
+}
+
+.social-icon.instagram:hover {
+  color: #E4405F;
+}
+
+.social-icon.youtube:hover {
+  color: #FF0000;
+}
+
+.social-icon.whatsapp:hover {
+  color: #25D366;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-social-icons {
+    gap: 30px;
+  }
+  .social-icon {
+    font-size: 32px;
+  }
+}
